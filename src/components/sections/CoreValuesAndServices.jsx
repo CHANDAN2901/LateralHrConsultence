@@ -95,20 +95,20 @@ export default function CoreValuesAndServices() {
 
           <div className="flex flex-col gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="bg-white text-black hover:shadow-lg transition-shadow ">
-                <CardContent className="p-4 flex items-center gap-6 h-full">
-                  <div className="flex-shrink-0 w-32 h-32 rounded-2xl bg-gray-200 flex items-center justify-center p-4">
+              <Card key={index} className="bg-white text-black hover:shadow-lg transition-shadow rounded-3xl">
+                <CardContent className="p-6 md:p-4 flex flex-col md:flex-row md:items-center gap-6 h-full">
+                  <div className="flex-shrink-0 w-full md:w-32 h-72 md:h-32 rounded-2xl bg-gray-200 flex items-center justify-center p-8 md:p-4">
                     <img src={service.iconPath} alt={service.title} className="w-full h-full object-contain" />
                   </div>
                   <div className="flex-grow">
-                    <h3 className="text-4xl font-bold mb-3">{service.title}</h3>
-                    <p className="text-gray-800 text-[18px] leading-snug">{service.description}</p>
+                    <h3 className="text-3xl md:text-4xl font-bold mb-3">{service.title}</h3>
+                    <p className="text-gray-800 text-base md:text-[18px] leading-snug">{service.description}</p>
                   </div>
-                  <div className="flex-shrink-0">
-                    <Button variant="ghost" className="p-0 h-auto text-black hover:bg-transparent">
+                  <div className="flex-shrink-0 w-full md:w-auto">
+                    <Button variant="ghost" className="w-full md:w-auto px-4 py-3 h-auto text-black hover:bg-gray-50 justify-center md:justify-start border border-gray-200 rounded-full">
                       <span className="text-base font-semibold mr-3">Learn more</span>
-                      <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-black">
-                        <ArrowRight className="h-6 w-6 text-white" />
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black">
+                        <ArrowRight className="h-5 w-5 text-white" />
                       </span>
                     </Button>
                   </div>

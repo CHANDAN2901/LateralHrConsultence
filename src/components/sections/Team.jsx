@@ -59,20 +59,21 @@ export default function Team() {
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="flex flex-col lg:flex-row gap-4 items-stretch h-[500px]">
+        {/* Team Grid - Scrollable on all screens */}
+        <div className="flex flex-row gap-4 items-stretch h-[500px] lg:h-[500px] overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 snap-x snap-mandatory lg:snap-none">
           {teamMembers.map((member, index) => {
             const isSelected = hoveredMember === index
             
             return (
               <div
                 key={index}
-                className={`relative cursor-pointer transition-all duration-500 ease-in-out overflow-hidden rounded-2xl h-full ${
+                className={`relative cursor-pointer transition-all duration-500 ease-in-out overflow-hidden rounded-2xl h-full flex-shrink-0 lg:flex-shrink snap-center ${
                   isSelected 
-                    ? 'lg:flex-[2] flex flex-col lg:flex-row' 
-                    : 'lg:flex-[0.8] hover:lg:flex-[0.9]'
+                    ? 'w-[85vw] sm:w-[70vw] lg:w-auto lg:flex-[2] flex flex-col lg:flex-row' 
+                    : 'w-[45vw] sm:w-[35vw] lg:w-auto lg:flex-[0.8] hover:lg:flex-[0.9]'
                 }`}
                 onMouseEnter={() => handleMemberHover(index)}
+                onClick={() => handleMemberHover(index)}
               >
                 {/* Image Container */}
                 <div 
@@ -100,7 +101,7 @@ export default function Team() {
 
                 {/* Expanded Content for Selected Member */}
                 {isSelected && (
-                  <div className="bg-neutral-900 text-white p-6 lg:p-8 flex flex-col justify-center lg:flex-1 rounded-2xl lg:rounded-l-none overflow-hidden">
+                  <div className="hidden lg:flex bg-neutral-900 text-white p-6 lg:p-8 flex-col justify-center lg:flex-1 rounded-2xl lg:rounded-l-none overflow-hidden">
                     <div className={`transition-all duration-500 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                       <blockquote className="text-base lg:text-lg leading-relaxed mb-6 line-clamp-6">
                         "{member.quote}"
