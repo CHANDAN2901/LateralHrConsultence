@@ -5,7 +5,7 @@ export default function WhyChoose() {
   const reasons = [
     {
       title: "Legally Compliant Hiring",
-      description: "Full compliance with Indian and international labor laws"
+      description: "Full compliance with Indian and international labour"
     },
     {
       title: "Cross-Border Expertise",

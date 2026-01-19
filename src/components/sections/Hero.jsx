@@ -34,12 +34,10 @@ export default function Hero() {
               {/* Content */}
               <div className="relative z-10 flex flex-col justify-center h-full">
                 <h1 className="text-4xl md:text-5xl lg:text-[56px] leading-tight font-bold mb-6">
-                  From India to the World, We Build Global Teams
+                  Expand into India- Without Setting Up an Entity.
                 </h1>
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed max-w-xl">
-                  Simplify international hiring with our Employer of Record (EOR), Global Hiring,
-                  and HR Strategy services. We make cross-border employment legal, easy, and
-                  efficient.
+                  Your trusted Employer of Record for compliant hiring, payroll, and people management.
                 </p>
                 <Button className="bg-white text-black hover:bg-gray-100 rounded-full w-[182px] h-12 px-6 pl-6 pr-1 py-3 text-base font-semibold flex items-center justify-between gap-2.5">
                   Consult Now

@@ -1,37 +1,23 @@
 import { useState, useEffect } from "react"
 
 export default function Team() {
-  const [hoveredMember, setHoveredMember] = useState(1) // Default to second member (Rahul)
+  const [hoveredMember, setHoveredMember] = useState(0) // Default to first member (Chirag)
   const [showContent, setShowContent] = useState(true)
 
   const teamMembers = [
     {
-      name: "Ananya Mehta",
-      role: "Founder and Global Talent Specialist",
-      quote: "Building global teams isn't just about filling positions — it's about understanding cultures, navigating complexities, and creating lasting partnerships that drive real business growth.",
-      description: "With over 15 years of experience in international HR consulting, Ananya founded Lateral HR to bridge the gap between global companies and India's exceptional talent pool.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+      name: "Chirag Thakker",
+      role: "Founder",
+      quote: "Enabling global organizations to enter and scale in India through compliant Employer of Record (EOR) solutions, ensuring seamless hiring, payroll, statutory compliance, and risk mitigation without the need for a local entity.",
+      description: "Chirag Thakker is the Founder of Lateral HR Consulting, bringing over 15 years of experience in Talent Acquisition and HR leadership across multiple industries and international markets. In parallel, Chirag works closely with family offices and angel investors to deploy capital into early-stage companies and leads strategic initiatives such as The Pitch Den, a curated founder–investor platform.",
+      image: "/teams/chirag.jpeg"
     },
     {
-      name: "Rahul Verma",
-      role: "Employer of Record (EOR) Specialist",
-      quote: "When compliance, payroll, and contracts are handled correctly, companies can expand into new markets without fear or friction. My role is to ensure that every hire is compliant, transparent, and smooth — so global teams can focus on growth instead of regulations.",
-      description: "Specializes in setting up compliant employment structures, managing contracts, and ensuring smooth onboarding for global companies hiring in India.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
-    },
-    {
-      name: "Sarah Collins",
-      role: "Head of Client Relations",
-      quote: "Every client has unique needs and challenges. My job is to listen, understand, and deliver solutions that exceed expectations while building relationships that last.",
-      description: "Sarah leads our client success initiatives, ensuring seamless communication and satisfaction across all engagements with a focus on long-term partnerships.",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80"
-    },
-    {
-      name: "Kunal Shah",
-      role: "Lead Talent Acquisition Specialist",
-      quote: "The right talent can transform a company. I'm passionate about connecting exceptional professionals with opportunities that match their skills and aspirations.",
-      description: "Kunal brings expertise in identifying and attracting top-tier talent across technology, finance, and leadership roles for international clients expanding in India.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
+      name: "Dhanashree Paste",
+      role: "Chief of Staff",
+      quote: "Facilitating client requirements, strengthening talent pipelines, and ensuring seamless workforce deployment for international companies expanding into India.",
+      description: "Dhanashree Paste is the Chief of Staff at Lateral HR Consulting, working closely with the Founder to drive strategic execution, operational alignment, and delivery excellence across Employer of Record (EOR) engagements. With a background in building industry-academia connections and verified talent ecosystems through her work with GrindUp, Dhanashree brings a strong understanding of workforce readiness.",
+      image: "/teams/dhanashree.jpeg"
     }
   ]
 
@@ -63,34 +49,30 @@ export default function Team() {
         <div className="flex flex-row gap-4 items-stretch h-[500px] lg:h-[500px] overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 snap-x snap-mandatory lg:snap-none">
           {teamMembers.map((member, index) => {
             const isSelected = hoveredMember === index
-            
+
             return (
               <div
                 key={index}
-                className={`relative cursor-pointer transition-all duration-500 ease-in-out overflow-hidden rounded-2xl h-full flex-shrink-0 lg:flex-shrink snap-center ${
-                  isSelected 
-                    ? 'w-[85vw] sm:w-[70vw] lg:w-auto lg:flex-[2] flex flex-col lg:flex-row' 
-                    : 'w-[45vw] sm:w-[35vw] lg:w-auto lg:flex-[0.8] hover:lg:flex-[0.9]'
-                }`}
-                onMouseEnter={() => handleMemberHover(index)}
+                className={`relative cursor-pointer transition-all duration-500 ease-in-out overflow-hidden rounded-2xl h-full flex-shrink-0 lg:flex-shrink snap-center ${isSelected
+                  ? 'w-[85vw] sm:w-[70vw] lg:w-auto lg:flex-[2] flex flex-col lg:flex-row'
+                  : 'w-[45vw] sm:w-[35vw] lg:w-auto lg:flex-[0.8] hover:lg:flex-[0.9]'
+                  }`}
                 onClick={() => handleMemberHover(index)}
               >
                 {/* Image Container */}
-                <div 
-                  className={`relative overflow-hidden transition-all duration-500 rounded-2xl h-full ${
-                    isSelected 
-                      ? 'lg:w-[280px] flex-shrink-0 lg:rounded-r-none' 
-                      : 'w-full'
-                  }`}
+                <div
+                  className={`relative overflow-hidden transition-all duration-500 rounded-2xl h-full ${isSelected
+                    ? 'lg:w-[280px] flex-shrink-0 lg:rounded-r-none'
+                    : 'w-full'
+                    }`}
                 >
                   <img
                     src={member.image}
                     alt={member.name}
-                    className={`w-full h-full object-cover object-top transition-all duration-500 ${
-                      isSelected ? '' : 'grayscale hover:grayscale-[50%]'
-                    }`}
+                    className={`w-full h-full object-cover object-top transition-all duration-500 ${isSelected ? '' : 'grayscale hover:grayscale-[50%]'
+                      }`}
                   />
-                  
+
                   {/* Name overlay for non-selected members */}
                   {!isSelected && (
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent rounded-b-2xl">

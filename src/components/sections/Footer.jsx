@@ -7,9 +7,9 @@ export default function Footer() {
       <section className="py-20 md:py-32 text-white relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/shadedBg.png" 
-            alt="" 
+          <img
+            src="/shadedBg.png"
+            alt=""
             className="w-full h-full object-cover"
           />
         </div>
@@ -28,7 +28,7 @@ export default function Footer() {
 
             {/* Right side - Button */}
             <div>
-              <a 
+              <a
                 href="#contact"
                 className="bg-white hover:bg-gray-100 text-black rounded-full w-[260px] h-12 pl-6 pr-1 text-base font-medium flex items-center justify-between"
               >
@@ -51,26 +51,26 @@ export default function Footer() {
           <div className="lg:max-w-xl">
             {/* Logos */}
             <div className="flex items-center gap-3 mb-6">
-              <img 
-                src="/headerLogo.jpg" 
-                alt="Lateral HR Consulting" 
+              <img
+                src="/headerLogo.jpg"
+                alt="Lateral HR Consulting"
                 className="h-12 object-contain"
               />
-              <a 
-                href="https://www.refrens.com/free-online-invoicing-software" 
-                target="_blank" 
+              <a
+                href="https://www.refrens.com/free-online-invoicing-software"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                <img 
-                  src="/refrenLogo.jpg" 
-                  alt="Powered by Refrens" 
+                <img
+                  src="/refrenLogo.jpg"
+                  alt="Powered by Refrens"
                   className="h-12 object-contain"
                 />
               </a>
             </div>
-            
+
             <p className="text-gray-600 text-base mb-6 leading-relaxed">
-              From India to the World, We Build Global Teams. Empowering companies to hire, onboard, and manage talent across borders seamlessly and compliantly.
+              We enable global companies to hire, employ, and manage teams in India without setting up a local entity. We handle payroll, labour law compliance, contracts, statutory benefits, and employee exits end to end.
             </p>
 
             {/* Social Links */}
@@ -80,7 +80,7 @@ export default function Footer() {
               </a>
               <a href="#" className="text-black hover:text-gray-600 transition-colors">
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </a>
               <a href="#" className="text-black hover:text-gray-600 transition-colors">
@@ -98,10 +98,10 @@ export default function Footer() {
             <div>
               <h4 className="font-bold mb-4">Quick Links</h4>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-black transition-colors">Our Services</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">EOR Services</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Global Hiring</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">About Us</a></li>
+                <li><a href="#services" className="hover:text-black transition-colors">Our Services</a></li>
+                <li><a href="#services" className="hover:text-black transition-colors">EOR Services</a></li>
+                <li><a href="#home" className="hover:text-black transition-colors">Global Hiring</a></li>
+                <li><a href="#about" className="hover:text-black transition-colors">About Us</a></li>
               </ul>
             </div>
 

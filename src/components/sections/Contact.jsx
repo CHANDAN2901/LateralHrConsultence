@@ -38,31 +38,69 @@ export default function Contact() {
             <h3 className="text-2xl md:text-3xl font-bold mb-6">Get in touch with us</h3>
             <form className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
-                <Input 
-                  placeholder="First Name" 
+                <Input
+                  placeholder="First Name"
                   className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500"
                 />
-                <Input 
-                  placeholder="Last Name" 
+                <Input
+                  placeholder="Last Name"
                   className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500"
                 />
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
-                <Input 
-                  type="email" 
-                  placeholder="Email" 
+                <Input
+                  type="email"
+                  placeholder="Email"
                   className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500"
                 />
-                <Input 
-                  type="tel" 
-                  placeholder="Contact number" 
-                  className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500"
-                />
+                <div className="flex gap-2">
+                  <div className="relative">
+                    <select
+                      className="h-12 bg-blue-50/50 border-0 rounded-lg pl-3 pr-8 text-gray-900 appearance-none focus:ring-0 cursor-pointer min-w-[80px]"
+                      defaultValue="+91"
+                    >
+                      <option value="+91">🇮🇳 +91</option>
+                      <option value="+1">🇺🇸/🇨🇦 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                      <option value="+61">🇦🇺 +61</option>
+                      <option value="+971">🇦🇪 +971</option>
+                      <option value="+65">🇸🇬 +65</option>
+                      <option value="+49">🇩🇪 +49</option>
+                      <option value="+33">🇫🇷 +33</option>
+                      <option value="+81">🇯🇵 +81</option>
+                      <option value="+86">🇨🇳 +86</option>
+                      <option value="+852">🇭🇰 +852</option>
+                      <option value="+39">🇮🇹 +39</option>
+                      <option value="+34">🇪🇸 +34</option>
+                      <option value="+31">🇳🇱 +31</option>
+                      <option value="+46">🇸🇪 +46</option>
+                      <option value="+41">🇨🇭 +41</option>
+                      <option value="+966">🇸🇦 +966</option>
+                      <option value="+974">🇶🇦 +974</option>
+                      <option value="+968">🇴🇲 +968</option>
+                      <option value="+965">🇰🇼 +965</option>
+                      <option value="+55">🇧🇷 +55</option>
+                      <option value="+7">🇷🇺 +7</option>
+                      <option value="+27">🇿🇦 +27</option>
+                    </select>
+                    {/* Custom Arrow */}
+                    <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L9 1" stroke="#6B7280" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <Input
+                    type="tel"
+                    placeholder="Contact number"
+                    className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500 flex-1"
+                  />
+                </div>
               </div>
 
-              <Input 
-                placeholder="Location" 
+              <Input
+                placeholder="Location"
                 className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500"
               />
 
@@ -129,9 +167,8 @@ export default function Contact() {
               <Phone className="h-5 w-5 text-gray-700" />
             </div>
             <div>
-              <p className="text-sm text-gray-500 mb-1">Location</p>
+              <p className="text-sm text-gray-500 mb-1">Contact</p>
               <p className="font-semibold text-sm">+91 9967782367</p>
-              <p className="font-semibold text-sm">+1 (925) 804-1943</p>
             </div>
           </div>
         </div>
