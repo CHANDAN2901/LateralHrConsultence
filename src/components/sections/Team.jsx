@@ -17,7 +17,7 @@ export default function Team() {
       role: "Chief of Staff",
       quote: "Facilitating client requirements, strengthening talent pipelines, and ensuring seamless workforce deployment for international companies expanding into India.",
       description: "Dhanashree Paste is the Chief of Staff at Lateral HR Consulting, working closely with the Founder to drive strategic execution, operational alignment, and delivery excellence across Employer of Record (EOR) engagements. With a background in building industry-academia connections and verified talent ecosystems through her work with GrindUp, Dhanashree brings a strong understanding of workforce readiness.",
-      image: "/teams/dhanashree.jpeg"
+      image: "/teams/dhanashree.jpg"
     }
   ]
 
