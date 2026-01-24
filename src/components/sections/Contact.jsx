@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, ArrowRight } from "lucide-react"
 
 export default function Contact() {
   return (
-    <section className="py-20 md:py-32 bg-gray-100">
+    <section id="contact" className="py-20 md:py-32 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12">

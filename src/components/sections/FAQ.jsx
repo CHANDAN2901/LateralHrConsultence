@@ -57,7 +57,7 @@ export default function FAQ() {
   return (
     <>
       {/* FAQ Section */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section id="reviews" className="py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`flex flex-col ${showAll ? 'gap-8' : 'lg:flex-row gap-10'} items-start`}>
             {/* Left side - Content */}

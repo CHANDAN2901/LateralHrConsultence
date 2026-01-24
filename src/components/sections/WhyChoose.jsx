@@ -1,5 +1,6 @@
 import { Check, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom"
 
 export default function WhyChoose() {
   const reasons = [
@@ -46,12 +47,14 @@ export default function WhyChoose() {
               ))}
             </div>
             <div>
-              <Button className="bg-transparent text-black border-2 border-black hover:bg-gray-50 rounded-full w-[240px] h-12 px-6 pl-6 pr-1 py-3 text-base font-semibold flex items-center justify-between gap-2.5">
-                Learn more about us
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black">
-                  <ArrowRight className="h-5 w-5 text-white" />
-                </span>
-              </Button>
+              <Link to="/#contact">
+                <Button className="bg-transparent text-black border-2 border-black hover:bg-gray-50 rounded-full w-[240px] h-12 px-6 pl-6 pr-1 py-3 text-base font-semibold flex items-center justify-between gap-2.5">
+                  Learn more about us
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black">
+                    <ArrowRight className="h-5 w-5 text-white" />
+                  </span>
+                </Button>
+              </Link>
             </div>
           </div>
 

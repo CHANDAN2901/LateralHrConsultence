@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Briefcase } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function Hero() {
   return (
@@ -39,12 +40,14 @@ export default function Hero() {
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed max-w-xl">
                   Your trusted Employer of Record for compliant hiring, payroll, and people management.
                 </p>
-                <Button className="bg-white text-black hover:bg-gray-100 rounded-full w-[182px] h-12 px-6 pl-6 pr-1 py-3 text-base font-semibold flex items-center justify-between gap-2.5">
-                  Consult Now
-                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black">
-                    <Briefcase className="h-5 w-5 text-white" />
-                  </span>
-                </Button>
+                <Link to="/#contact">
+                  <Button className="bg-white text-black hover:bg-gray-100 rounded-full w-[182px] h-12 px-6 pl-6 pr-1 py-3 text-base font-semibold flex items-center justify-between gap-2.5">
+                    Consult Now
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black">
+                      <Briefcase className="h-5 w-5 text-white" />
+                    </span>
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

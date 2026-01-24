@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Menu, ArrowRight, X } from "lucide-react"
 
@@ -6,11 +7,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Our Services", href: "#services" },
-    { name: "Our Team", href: "#team" },
-    { name: "Reviews", href: "#reviews" },
+    { name: "Home", href: "/#home" },
+    { name: "About Us", href: "/#about" },
+    { name: "Our Services", href: "/#services" },
+    { name: "Our Team", href: "/#team" },
+    { name: "Reviews", href: "/#reviews" },
   ]
 
   return (
@@ -19,31 +20,33 @@ export default function Header() {
         <div className="bg-white rounded-2xl shadow-lg px-4 sm:px-6 relative">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
-            <div className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0">
               <img src="/headerLogo.jpg" alt="Lateral HR Consulting" className="h-10 sm:h-12" />
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-10">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="text-base font-medium hover:text-gray-600 transition-colors"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <Button className="bg-black hover:bg-gray-900 text-white rounded-full w-[182px] h-12 px-6 pl-6 pr-1 py-3 text-base flex items-center justify-between gap-2.5">
-                Contact Us
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white">
-                  <ArrowRight className="h-5 w-5 text-black" />
-                </span>
-              </Button>
+              <Link to="/#contact">
+                <Button className="bg-black hover:bg-gray-900 text-white rounded-full w-[182px] h-12 px-6 pl-6 pr-1 py-3 text-base flex items-center justify-between gap-2.5">
+                  Contact Us
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white">
+                    <ArrowRight className="h-5 w-5 text-black" />
+                  </span>
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -60,21 +63,23 @@ export default function Header() {
             <div className="lg:hidden absolute top-full left-0 right-0 mt-2 p-4 bg-white rounded-2xl shadow-xl border border-gray-100 flex flex-col gap-4 animate-in slide-in-from-top-2 fade-in duration-200">
               <nav className="flex flex-col gap-2">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.name}
-                    href={link.href}
+                    to={link.href}
                     className="text-lg font-medium p-2 hover:bg-gray-50 rounded-lg transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 ))}
               </nav>
               <div className="pt-2 border-t border-gray-100">
-                <Button className="w-full bg-black hover:bg-gray-900 text-white rounded-full h-12 text-base flex items-center justify-center gap-2">
-                  Contact Us
-                  <ArrowRight className="h-5 w-5" />
-                </Button>
+                <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-black hover:bg-gray-900 text-white rounded-full h-12 text-base flex items-center justify-center gap-2">
+                    Contact Us
+                    <ArrowRight className="h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
             </div>
           )}
