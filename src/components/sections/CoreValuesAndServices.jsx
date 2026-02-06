@@ -79,7 +79,7 @@ export default function CoreValuesAndServices() {
         </div>
 
         {/* Core Services Section */}
-        <div>
+        <div id="our-services" className="scroll-mt-32">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
             <div>
               <h2 className="text-5xl font-bold mb-2">

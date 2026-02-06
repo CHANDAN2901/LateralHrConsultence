@@ -20,10 +20,14 @@ function ScrollToHash() {
 
   useEffect(() => {
     if (location.hash) {
-      const element = document.getElementById(location.hash.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      // Use requestAnimationFrame and a setTimeout for better reliability
+      const timer = setTimeout(() => {
+        const element = document.getElementById(location.hash.replace('#', ''));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }

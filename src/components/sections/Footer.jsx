@@ -1,6 +1,9 @@
 import { Linkedin, Instagram, Facebook } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 export default function Footer() {
+  const navigate = useNavigate()
+
   return (
     <footer className="bg-white text-black">
       {/* CTA Section */}
@@ -98,10 +101,10 @@ export default function Footer() {
             <div>
               <h4 className="font-bold mb-4">Quick Links</h4>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li><a href="#services" className="hover:text-black transition-colors">Our Services</a></li>
-                <li><a href="#services" className="hover:text-black transition-colors">EOR Services</a></li>
-                <li><a href="#home" className="hover:text-black transition-colors">Global Hiring</a></li>
-                <li><a href="#about" className="hover:text-black transition-colors">About Us</a></li>
+                <li><button onClick={() => navigate('/#our-services')} className="hover:text-black transition-colors text-left">Our Services</button></li>
+                <li><button onClick={() => navigate('/services/eor')} className="hover:text-black transition-colors text-left">EOR Services</button></li>
+                <li><button onClick={() => navigate('/services/global-hiring')} className="hover:text-black transition-colors text-left">Global Hiring</button></li>
+                {/* <li><a href="#about" className="hover:text-black transition-colors">About Us</a></li> */}
               </ul>
             </div>
 
@@ -109,10 +112,11 @@ export default function Footer() {
             <div>
               <h4 className="font-bold mb-4">Resources</h4>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-black transition-colors">Blogs</a></li>
+                {/* <li><a href="#" className="hover:text-black transition-colors">Blogs</a></li>
                 <li><a href="#" className="hover:text-black transition-colors">Terms of services</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Contact Us</a></li>
+                <li><a href="#" className="hover:text-black transition-colors">Privacy Policy</a></li> */}
+                <li><button onClick={() => navigate('/#contact')} className="hover:text-black transition-colors text-left">Contact Us</button></li>
+                <li><button onClick={() => navigate('/#about')} className="hover:text-black transition-colors text-left">About Us</button></li>
               </ul>
             </div>
           </div>
