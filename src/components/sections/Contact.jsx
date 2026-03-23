@@ -1,9 +1,36 @@
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react"
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    countryCode: '+91',
+    contactNumber: '',
+    location: '',
+    requirement: ''
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const subject = `New Contact Inquiry from ${formData.firstName} ${formData.lastName}`;
+    const body = `Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.countryCode} ${formData.contactNumber}
+Location: ${formData.location}
+
+Requirement:
+${formData.requirement}`;
+
+    const mailtoLink = `mailto:chirag@lateralhr.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
     <section id="contact" className="py-20 md:py-32 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,14 +63,20 @@ export default function Contact() {
           {/* Right side - Contact Form */}
           <div className="bg-white rounded-2xl p-6 md:p-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-6">Get in touch with us</h3>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <Input
                   placeholder="First Name"
+                  required
+                  value={formData.firstName}
+                  onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                   className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500"
                 />
                 <Input
                   placeholder="Last Name"
+                  required
+                  value={formData.lastName}
+                  onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                   className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500"
                 />
               </div>
@@ -52,13 +85,17 @@ export default function Contact() {
                 <Input
                   type="email"
                   placeholder="Email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500"
                 />
                 <div className="flex gap-2">
                   <div className="relative">
                     <select
                       className="h-12 bg-blue-50/50 border-0 rounded-lg pl-3 pr-8 text-gray-900 appearance-none focus:ring-0 cursor-pointer min-w-[80px]"
-                      defaultValue="+91"
+                      value={formData.countryCode}
+                      onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
                     >
                       <option value="+91">🇮🇳 +91</option>
                       <option value="+1">🇺🇸/🇨🇦 +1</option>
@@ -94,6 +131,9 @@ export default function Contact() {
                   <Input
                     type="tel"
                     placeholder="Contact number"
+                    required
+                    value={formData.contactNumber}
+                    onChange={(e) => setFormData({ ...formData, contactNumber: e.target.value })}
                     className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500 flex-1"
                   />
                 </div>
@@ -101,16 +141,21 @@ export default function Contact() {
 
               <Input
                 placeholder="Location"
+                value={formData.location}
+                onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                 className="bg-blue-50/50 border-0 h-12 rounded-lg placeholder:text-gray-500"
               />
 
               <Textarea
                 placeholder="Give a little brief about your requirement"
                 rows={5}
+                required
+                value={formData.requirement}
+                onChange={(e) => setFormData({ ...formData, requirement: e.target.value })}
                 className="bg-blue-50/50 border-0 rounded-lg placeholder:text-gray-500 resize-none"
               />
 
-              <Button className="bg-white hover:bg-gray-100 text-black border border-gray-300 rounded-full w-[150px] h-12 pl-6 pr-1 text-base flex items-center justify-between">
+              <Button type="submit" className="bg-white hover:bg-gray-100 text-black border border-gray-300 rounded-full w-[150px] h-12 pl-6 pr-1 text-base flex items-center justify-between">
                 Submit
                 <span className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
                   <ArrowRight className="h-5 w-5 text-white" />
