@@ -14,21 +14,43 @@ export default function Contact() {
     location: '',
     requirement: ''
   });
+  const [status, setStatus] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus("Sending...");
     
-    const subject = `New Contact Inquiry from ${formData.firstName} ${formData.lastName}`;
-    const body = `Name: ${formData.firstName} ${formData.lastName}
-Email: ${formData.email}
-Phone: ${formData.countryCode} ${formData.contactNumber}
-Location: ${formData.location}
+    const submitData = new FormData();
+    submitData.append("access_key", "7da24b0b-5838-4e0c-9342-790e511d97cc");
+    submitData.append("subject", `New Contact Inquiry from ${formData.firstName} ${formData.lastName}`);
+    submitData.append("from_name", `${formData.firstName} ${formData.lastName}`);
+    submitData.append("Name", `${formData.firstName} ${formData.lastName}`);
+    submitData.append("Email", formData.email);
+    submitData.append("Phone", `${formData.countryCode} ${formData.contactNumber}`);
+    submitData.append("Location", formData.location);
+    submitData.append("Requirement", formData.requirement);
 
-Requirement:
-${formData.requirement}`;
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: submitData
+      });
 
-    const mailtoLink = `mailto:chirag@lateralhr.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+      const data = await response.json();
+      if (data.success) {
+        setStatus("Success! Your message has been sent.");
+        setFormData({
+          firstName: '', lastName: '', email: '', countryCode: '+91',
+          contactNumber: '', location: '', requirement: ''
+        });
+        setTimeout(() => setStatus(""), 5000);
+      } else {
+        setStatus("Error sending message. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("Error sending message. Please try again.");
+    }
   };
 
   return (
@@ -155,12 +177,17 @@ ${formData.requirement}`;
                 className="bg-blue-50/50 border-0 rounded-lg placeholder:text-gray-500 resize-none"
               />
 
-              <Button type="submit" className="bg-white hover:bg-gray-100 text-black border border-gray-300 rounded-full w-[150px] h-12 pl-6 pr-1 text-base flex items-center justify-between">
-                Submit
+              <Button type="submit" disabled={status === "Sending..."} className="bg-white hover:bg-gray-100 text-black border border-gray-300 rounded-full w-[150px] h-12 pl-6 pr-1 text-base flex items-center justify-between disabled:opacity-50">
+                {status === "Sending..." ? "Sending..." : "Submit"}
                 <span className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
                   <ArrowRight className="h-5 w-5 text-white" />
                 </span>
               </Button>
+              {status && (
+                <p className={`text-sm mt-2 ${status.includes("Success") ? "text-green-600" : "text-red-500"}`}>
+                  {status}
+                </p>
+              )}
             </form>
           </div>
         </div>
