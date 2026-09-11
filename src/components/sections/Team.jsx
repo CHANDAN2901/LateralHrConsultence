@@ -11,13 +11,6 @@ export default function Team() {
       quote: "Enabling global organizations to enter and scale in India through compliant Employer of Record (EOR) solutions, ensuring seamless hiring, payroll, statutory compliance, and risk mitigation without the need for a local entity.",
       description: "Chirag Thakker is the Founder of Lateral HR Consulting, bringing over 15 years of experience in Talent Acquisition and HR leadership across multiple industries and international markets. In parallel, Chirag works closely with family offices and angel investors to deploy capital into early-stage companies and leads strategic initiatives such as The Pitch Den, a curated founder–investor platform.",
       image: "/teams/chirag.jpeg"
-    },
-    {
-      name: "Dhanashree Paste",
-      role: "Chief of Staff",
-      quote: "Facilitating client requirements, strengthening talent pipelines, and ensuring seamless workforce deployment for international companies expanding into India.",
-      description: "Dhanashree Paste is the Chief of Staff at Lateral HR Consulting, working closely with the Founder to drive strategic execution, operational alignment, and delivery excellence across Employer of Record (EOR) engagements. With a background in building industry-academia connections and verified talent ecosystems through her work with GrindUp, Dhanashree brings a strong understanding of workforce readiness.",
-      image: "/teams/dhanashree.jpg"
     }
   ]
 
@@ -62,7 +55,7 @@ export default function Team() {
                 {/* Image Container */}
                 <div
                   className={`relative overflow-hidden transition-all duration-500 rounded-2xl h-full ${isSelected
-                    ? 'lg:w-[280px] flex-shrink-0 lg:rounded-r-none'
+                    ? 'lg:w-[420px] flex-shrink-0 lg:rounded-r-none'
                     : 'w-full'
                     }`}
                 >
