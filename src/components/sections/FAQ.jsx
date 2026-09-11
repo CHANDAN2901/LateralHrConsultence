@@ -117,7 +117,7 @@ export default function FAQ() {
             <div className="flex-1 w-full lg:w-auto sticky top-24 self-start">
               <div className="w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden">
                 <img
-                  src="/section4Image.jpg"
+                  src="/section4Image.webp"
                   alt="FAQ support"
                   className="w-full h-full object-cover"
                 />

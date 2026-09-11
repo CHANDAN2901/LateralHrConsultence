@@ -21,7 +21,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src="/headerLogo.jpg" alt="Lateral HR Consulting" className="h-10 sm:h-12" />
+              <img src="/headerLogo.webp" alt="Lateral HR Consulting" className="h-10 sm:h-12" />
             </Link>
 
             {/* Desktop Navigation */}

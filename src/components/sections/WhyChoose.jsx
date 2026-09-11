@@ -62,7 +62,7 @@ export default function WhyChoose() {
           <div className="flex-shrink-0 lg:w-1/2">
             <div className="w-full h-[400px] lg:h-[600px] rounded-3xl overflow-hidden">
               <img
-                src="/section2Image.jpg"
+                src="/section2Image.webp"
                 alt="Team collaboration"
                 className="w-full h-full object-cover"
               />

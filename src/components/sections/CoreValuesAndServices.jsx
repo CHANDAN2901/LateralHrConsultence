@@ -6,17 +6,17 @@ import { Link } from "react-router-dom"
 export default function CoreValuesAndServices() {
   const values = [
     {
-      iconPath: "/integrity.png",
+      iconPath: "/integrity.webp",
       title: "Integrity",
       description: "We operate with complete transparency and honesty in all our dealings"
     },
     {
-      iconPath: "/excellence.png",
+      iconPath: "/excellence.webp",
       title: "Excellence",
       description: "We strive for the highest standards in service delivery and client satisfaction"
     },
     {
-      iconPath: "/partnershiip.png",
+      iconPath: "/partnershiip.webp",
       title: "Partnership",
       description: "We believe in building long-term relationships based on mutual success"
     }
@@ -24,19 +24,19 @@ export default function CoreValuesAndServices() {
 
   const services = [
     {
-      iconPath: "/EOR.png",
+      iconPath: "/EOR.webp",
       title: "Employer of Record – EOR",
       description: "Hire talent in India without a local entity. We manage compliance, payroll onboarding and exit",
       route: "/services/eor"
     },
     {
-      iconPath: "/Global.png",
+      iconPath: "/Global.webp",
       title: "Global Hiring",
       description: "Hire in India and hire from anywhere without any hassle. We handle hiring, compliance, contracts, and payroll.",
       route: "/services/global-hiring"
     },
     {
-      iconPath: "/hrStrategy.png",
+      iconPath: "/hrStrategy.webp",
       title: "HR Strategy & Policy Development",
       description: "Build frameworks and policies that grow with your business.",
       route: "/services/hr-strategy-policy"
@@ -48,7 +48,7 @@ export default function CoreValuesAndServices() {
       id="services"
       className="py-20 md:py-32 relative text-white"
       style={{
-        backgroundImage: `url('/coreValueBg.png')`,
+        backgroundImage: `url('/coreValueBg.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

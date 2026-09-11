@@ -11,7 +11,7 @@ export default function Footer() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/shadedBg.png"
+            src="/shadedBg.webp"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -55,7 +55,7 @@ export default function Footer() {
             {/* Logos */}
             <div className="flex items-center gap-3 mb-6">
               <img
-                src="/headerLogo.jpg"
+                src="/headerLogo.webp"
                 alt="Lateral HR Consulting"
                 className="h-12 object-contain"
               />
@@ -65,7 +65,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/refrenLogo.jpg"
+                  src="/refrenLogo.webp"
                   alt="Powered by Refrens"
                   className="h-12 object-contain"
                 />

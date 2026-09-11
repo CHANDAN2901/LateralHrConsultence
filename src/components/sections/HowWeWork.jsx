@@ -33,7 +33,7 @@ export default function HowWeWork() {
           <div className="flex-shrink-0 lg:w-1/3">
             <div className="w-full h-[400px] lg:h-[600px] rounded-3xl overflow-hidden">
               <img
-                src="/section3Image.jpg"
+                src="/section3Image.webp"
                 alt="Professional team"
                 className="w-full h-full object-cover"
               />

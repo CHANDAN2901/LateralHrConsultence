@@ -11,7 +11,7 @@ export default function Hero() {
           <div className="order-2 lg:order-1 flex-shrink-0">
             <div className="w-full lg:w-[600px] h-[400px] lg:h-[600px] rounded-3xl overflow-hidden">
               <img
-                src="/section1Image.jpg"
+                src="/section1Image.webp"
                 alt="Professional working"
                 className="w-full h-full object-cover"
               />
@@ -26,7 +26,7 @@ export default function Hero() {
               {/* Background pattern image */}
               <div className="absolute inset-0">
                 <img 
-                  src="/heroSectionBg.png" 
+                  src="/heroSectionBg.webp" 
                   alt="" 
                   className="w-full h-full object-cover opacity-50"
                 />

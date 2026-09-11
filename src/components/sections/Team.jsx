@@ -10,7 +10,7 @@ export default function Team() {
       role: "Founder",
       quote: "Enabling global organizations to enter and scale in India through compliant Employer of Record (EOR) solutions, ensuring seamless hiring, payroll, statutory compliance, and risk mitigation without the need for a local entity.",
       description: "Chirag Thakker is the Founder of Lateral HR Consulting, bringing over 15 years of experience in Talent Acquisition and HR leadership across multiple industries and international markets. In parallel, Chirag works closely with family offices and angel investors to deploy capital into early-stage companies and leads strategic initiatives such as The Pitch Den, a curated founder–investor platform.",
-      image: "/teams/chirag.jpeg"
+      image: "/teams/chirag.webp"
     }
   ]
 

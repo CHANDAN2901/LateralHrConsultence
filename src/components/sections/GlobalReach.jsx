@@ -1,13 +1,13 @@
 export default function GlobalReach() {
   const countries = [
-    { name: "United States", flag: "/US.png" },
-    { name: "United Kingdom", flag: "/UK.png" },
-    { name: "Singapore", flag: "/singapore.png" },
-    { name: "Vietnam", flag: "/vietnam.png" },
-    { name: "Australia", flag: "/AUS.png" },
-    { name: "Thailand", flag: "/Thai.png" },
-    { name: "New Zealand", flag: "/NZ.png" },
-    { name: "Malaysia", flag: "/malaysia.png" },
+    { name: "United States", flag: "/US.webp" },
+    { name: "United Kingdom", flag: "/UK.webp" },
+    { name: "Singapore", flag: "/singapore.webp" },
+    { name: "Vietnam", flag: "/vietnam.webp" },
+    { name: "Australia", flag: "/AUS.webp" },
+    { name: "Thailand", flag: "/Thai.webp" },
+    { name: "New Zealand", flag: "/NZ.webp" },
+    { name: "Malaysia", flag: "/malaysia.webp" },
   ]
 
   return (
@@ -15,7 +15,7 @@ export default function GlobalReach() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/shadedBg.png" 
+          src="/shadedBg.webp" 
           alt="" 
           className="w-full h-full object-cover"
         />
